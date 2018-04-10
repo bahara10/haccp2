@@ -1,0 +1,108 @@
+ 
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    
+    <script type="text/javascript" src="jspdf.min.js"></script>
+    <script type="text/javascript" src="html2canvas.js"></script>
+     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>    
+    <script type="text/javascript" >
+    
+       function getPDF() {
+           var doc = new jsPDF() 
+           
+           doc.fromHTML($('#testDiv').get(0), 20,20,{
+                        
+                        'width':500 } ); 
+           
+           
+           doc.save ('Test.pdf');
+               
+           } 
+               
+               
+               
+               
+               
+               
+            
+                      
+                      
+           
+           
+       
+        
+    
+    </script>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+    h2{
+       text-align: center;
+        
+    }
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body>
+
+<h2>Агропродовольчий ринок</h2>
+ 
+<a href="javascript:getPDF()">Download</a>
+    
+<div id="testDiv">
+    <div id="test">
+        <div>
+        <h2>Test</h2>
+  <table>
+    <tr>
+       <th>№ з/п</th> 
+      <th>Питання щодо дотримання операторами ринку вимог законодавства</th>
+      <th>Нормативне обґрунтування</th>
+      <th>№</th>
+        <th>Роз'яснення</th>
+        
+      <th>Роз'ясненняII</th>
+    
+    </tr>
+    <tr>
+        <td>ІІІ</td>
+      <td>Гігієнічні вимоги до потужностей, на яких здійснюється виробництво та/або обіг харчових продуктів</td>
+      <td></td>
+    <td></td>
+    <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3.1.</td>
+      <td>Потужність підтримується в чистоті та у робочому стані</td>
+      <td>Пункт 1 частини першої статті 41 ЗУ № 771</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Ветеринарно-санітарні правила для ринків (п.2.1, 2.6-2.7, 3.7- 3.11, 3.14)</td>
+      <td>1</td>
+      <td>Територія ринку розмежовується на зони (п.2.1) :</td>
+      <td>Схема розміщення обєкта</td>
+     
+    </tr>
+
+
+</table>
+</div>
+</div>
+</div>    
+</body>
+</html>
